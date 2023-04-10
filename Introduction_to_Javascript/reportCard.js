@@ -1,0 +1,21 @@
+let nam ="XYZ ";
+let school ="ABC School";
+let grade = "A+";
+let section = "Web Development";
+let rollNo = 18;
+let phy = 93;
+let che = 90;
+let math = 96;
+let percentage = (phy+che+math)/3;
+console.log("Student Name-"+nam);
+console.log("Student School Name-"+school);
+console.log("Student section-"+section);
+console.log("Student Roll No-"+rollNo);
+console.log("Student Physics Marks-"+phy);
+console.log("Student Chemistry Marks-"+che);
+console.log("Student Maths Marks-"+math);
+console.log("Student Overall Percentage -"+percentage+"%");
+console.log("Student Grade-"+grade);
+//console.log("Student Result - Pass");
+
+console.log(`🆁🅴🆂🆄🅻🆃 🆈🅾🆄 🅰🆁🅴 🅿🅰🆂🆂🅴🅳`);
