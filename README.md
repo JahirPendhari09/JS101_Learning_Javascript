@@ -4,3 +4,4 @@ Content :-
 - Introduction to JavaScript
 - Mathemathical Operators
 - Arrays
+- Loops
