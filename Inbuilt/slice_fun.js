@@ -2,32 +2,43 @@
 // for st and ei index pass 
 function slice(arr,si,ei){
   let bag =[];
-  for(let i=si; i<ei; i++){
-    bag.push(arr[i]);
+  if(si>0 && ei>0){
+    for(let i=si; i<ei; i++){
+        bag.push(arr[i]);
+    }
+    return bag;
   }
-  return bag;
+  else if(si >0 && ei ==  undefined){
+      for(let i=si; i<arr.length; i++){
+          bag.push(arr[i]);
+       }
+       return bag;
+  }else if(si<0 && ei==undefined){
+       si = arr.length+si;
+      for(let i=si; i<arr.length; i++){
+         bag.push(arr[i]);
+      }
+    return bag;
+  }else if(si>0 && ei<0){
+    ei = arr.length+ei;
+    for(let i=si; i<ei; i++){
+      bag.push(arr[i]);
+    }
+    return bag;
+  }else if(si == undefined && ei == undefined){
+     si =0;
+    ei = arr.length;
+    for(let i=si; i<ei; i++){
+      bag.push(arr[i]);
+    }
+    return bag;
+  }
+  
 }
 
-// for only single index pass
-
-// function slice(arr,si){
-//   let bag =[];
-//   for(let i=si; i<arr.length; i++){
-//     bag.push(arr[i]);
-//   }
-//   return bag;
-// }
-
-// for no any indexes pass
-
-// function slice(arr){
-//   let bag =[];
-//   for(let i=0; i<arr.length; i++){
-//     bag.push(arr[i]);
-//   }
-//   return bag;
-//}
 let arr=['ant', 'bison', 'camel', 'duck', 'elephant']
 let k= slice(arr,2,5);
-//let k= slice(arr);
 console.log(k);
+
+let r = slice(arr,-2);
+console.log(r);
