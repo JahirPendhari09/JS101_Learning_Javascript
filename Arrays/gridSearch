@@ -1,0 +1,55 @@
+let arr=[["R","R","R","R"],["L","R","U","R"],["D","L","R","D"],["L","R","L","R"]];
+
+let l=0;
+let r=0;
+let count=0;
+let obj ={};
+let n=arr.length;
+
+while(l<n&&r<n&&l>=0&&r>=0)
+{
+    let val = arr[l][r];
+    if(val==="X"){
+        console.log("0");
+        return;
+    }
+    else if(val==="R")
+    {
+        arr[l][r]="X";
+        count++;
+        r++;
+    }
+    else if(val==="L")
+    {
+        arr[l][r]="X";
+        count++;
+        r--;
+    }
+    else if(val==="U")
+    {
+        arr[l][r]="X";
+        count++;
+        l--;
+    }
+    else if(val==="D")
+    {
+        arr[l][r]="X";
+        count++;
+        l++;
+    }
+    else{
+      break;
+    }
+
+    // way 2 using obj instead of assigning arr[l][r]="X";
+    //   let s = l+""+r+""
+    //   if(obj[s]===undefined)
+    //   {
+    //       obj[s] = 1;
+    //   }
+    //   else{
+    //       console.log(0);
+    //       return;
+    //   }
+}
+console.log(count);
